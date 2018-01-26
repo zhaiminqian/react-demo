@@ -1,0 +1,329 @@
+/*
+	HTML5 Reset :: style.css
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: normal;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+object,
+embed {
+    max-width: 100%;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* hand cursor on clickable elements */
+
+.clickable, select, label, input[type=button], input[type=submit], input[type=file], button {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/*去除移动端点击阴影*/
+input:focus,
+p:focus,
+a:focus,
+div:focus,
+label:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+/* let's clear some floats */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+    /* for IE6 IE7 */
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+/*常用样式*/
+.hidden {
+    display: none !important;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.relative {
+    position: relative;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*去除select 默认样式*/
+.no-appearance {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.no-appearance::-ms-expand {
+    display: none;
+}
+
+/*去除鼠标点击事件*/
+.click-disabled {
+    pointer-events: none; /*IE11+*/
+}
+
+/*禁止换行*/
+.no-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*********/
+.no-reset {
+    color: #000;
+}
+.no-reset .w-e-toolbar i, .no-reset .w-e-panel-container i {
+    font-style: inherit;
+}
+.no-reset h1, .no-reset h2, .no-reset h3, .no-reset h4, .no-reset h5, .no-reset h6 {
+    font-weight: bold;
+    line-height: 1.5;
+}
+.no-reset h1 {
+    font-size: 2em;
+}
+.no-reset h2 {
+    font-size: 1.5em;
+}
+.no-reset h3 {
+    font-size: 1.17em;
+}
+.no-reset h4 {
+    font-size: 1em;
+}
+.no-reset h5 {
+    font-size: 0.83em;
+}
+.no-reset p {
+    font-size: inherit;
+    line-height: 1.5;
+}
+.no-reset b, .no-reset em, .no-reset strong {
+    font-weight: bold;
+}
+.no-reset i {
+    font-style: italic;
+}
+.no-reset u, .no-reset ins {
+    text-decoration: underline;
+}
+.no-reset ol {
+    list-style: decimal;
+}
+.no-reset ul {
+    list-style: disc;
+}
+.no-reset a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+/****************************/

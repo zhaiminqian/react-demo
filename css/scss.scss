@@ -1,0 +1,92 @@
+// 颜色
+$mainColor: #f6b900;
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        // IE10+
+        @content;
+    }
+    &:-moz-placeholder {
+        // Firefox4-18
+        @content;
+    }
+    &::-moz-placeholder {
+        // Firefox19+
+        @content;
+    }
+}
+
+@mixin nowarp($argu: null) {
+    @if not $argu {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    @else {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $argu;
+        overflow: hidden;
+    }
+}
+
+@mixin pad($str) {
+    padding: $str;
+}
+
+@mixin over() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin over-line() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    -ms-line-clamp: 2;
+    -o-line-clamp: 2;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    word-break: break-all;
+}
+
+@mixin border() {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+@mixin public-mar() {
+    margin-bottom: 1rem;
+    padding-top: 1.1rem;
+}
+
+@mixin button() {
+    border: 2px solid #f6b900;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 0.24rem;
+    color: #f6b900;
+    text-align: center;
+    padding: 0;
+}
+
+@mixin button-active() {
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 0.24rem;
+    color: #b5b5b5;
+    text-align: center;
+}
